@@ -8,31 +8,20 @@ bool possible(int grid[SIZE][SIZE], int x, int y, int n);
 void solve(int grid[SIZE][SIZE], int *solution_found);
 
 int main() {
-    static int GRID[SIZE][SIZE] = {
-        {0, 0, 0, 9, 0, 0, 0, 0, 1}, 
-        {2, 0, 0, 0, 8, 0, 0, 3, 0}, 
-        {0, 0, 1, 0, 7, 0, 0, 8, 0}, 
-        {0, 0, 0, 3, 0, 0, 0, 0, 0}, 
-        {4, 0, 0, 0, 0, 6, 1, 0, 0}, 
-        {7, 0, 0, 0, 0, 0, 5, 0, 3}, 
-        {8, 0, 0, 5, 0, 2, 3, 4, 0}, 
-        {0, 0, 0, 0, 0, 0, 0, 6, 0}, 
-        {0, 0, 5, 7, 0, 0, 0, 0, 0}
-    };
+    static int GRID[SIZE][SIZE];
     int flag = 0;
     int i;
     int j;
 
     printf("Enter the rows of your Sudoku board - where blank put a 0\n\n");
     
-    // for (i = 0; i < SIZE; i++) {
-    //     printf("Row: %d\n\n", i+1);
-    //     for (j = 0; j < SIZE; j++) {
-    //         print_grid(GRID, SIZE, SIZE);
-    //         scanf("%d", &GRID[i][j]);
-    //     }
-        
-    // }
+    for (i = 0; i < SIZE; i++) {
+        printf("Row: %d\n\n", i+1);
+        for (j = 0; j < SIZE; j++) {
+            print_grid(GRID, SIZE, SIZE);
+            scanf("%d", &GRID[i][j]);
+        }
+    }
 
     printf("\nOriginal:\n\n");
     print_grid(GRID, SIZE, SIZE);
